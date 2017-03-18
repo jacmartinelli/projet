@@ -8,3 +8,4 @@ deploy:
   app: quiet-lowlands-40226
   on:
     repo: jacmartinelli/projet
+  run: "rake db:migrate"
