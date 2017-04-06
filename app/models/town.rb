@@ -2,7 +2,10 @@ class Town < ActiveRecord::Base
   before_validation :geoloc
   def geoloc
     loc = Nominatim.search(self.name).limit(1)
-    self.latitude = loc.first.lat
-    self.longitude = loc.first.lon
+    city = loc.first
+    if city
+      self.latitude = city.lat
+      self.longitude = city.lon
+    end
   end
 end
