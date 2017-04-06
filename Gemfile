@@ -39,3 +39,5 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# A Ruby wrapper for the Nominatim API.
+gem 'nominatim', '~> 0.0.5'
