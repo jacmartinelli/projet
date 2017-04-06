@@ -5,7 +5,7 @@ deploy:
   provider: heroku
   api_key:
     secure: mqTks5S4+D0gwQ6H+/AgHml//AwbcAvOo2RQGSckSAicLXt7itEwqk/uNjTFIZsuAYmt6BkeosbuyTwuWu/Ypmm5g3d+VEDwM37hK0regbzDVlHorhblsTG7WTZGmF3yiJsfdaW1JxKoqb13hQRQEsLi5fagBaqeRkjmwjL3zX/t+lGxOupnPvJ8tn1HSx1p4lux9C2jIsazzo3Grg+katRs0+vqIVEbg68WM5JxKHKhF/UqaU1i7gFw5vqVwiyaF6HCWYAn822ZVNCB1z5G+uxNXlWkL3EL3NITq9jckUp10gSgel61R1uqgX9xXWiMXTeL40gKGlEwo+Up3sst2iq8MuSaKIKTLkM9QreafmvGhxilhVpbRTTd8hYL/3Sl5ZnV1sX/V2JxtE4ZZpYwPp9P5tf9uDGLI3akUxw2oQ0yXuXCP/n/zNfBxjLHMVqJr68kgIZkOmf3atp9hV7OHReDsRFX4bK+vMetRssxL0Ff9Rr1dr1H00yv2iR0Z6ciUIxZYrYGql3lMdS1C+dhKaMNwGnrpJP7TDpUFlYqAgwZMy6BQerVGL+ADJ7ITGkqRN3f14ggZooUlG+FzGWtOEpPFcdUougf9ujm67V93ayXgYz7o5+jTb1sss9uC8d9paW6PvdIkKXxwDV7JooLs5Ez4DiGrShwCbnkpbbJJAI=
-  app: quiet-lowlands-40226
+ run: "rake db:migrate"
+ app: quiet-lowlands-40226
   on:
     repo: jacmartinelli/projet
-  run: "rake db:migrate"
