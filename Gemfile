@@ -41,3 +41,9 @@ gem 'spring',        group: :development
 
 # A Ruby wrapper for the Nominatim API.
 gem 'nominatim', '~> 0.0.5'
+
+# unit test gem
+gem 'vcr', '~> 3.0', '>= 3.0.3'
+
+# gem meteo
+gem 'forecast_io', '~> 2.0', '>= 2.0.1' 
