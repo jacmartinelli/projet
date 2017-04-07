@@ -1,6 +1,5 @@
 class TownsController < ApplicationController
   before_action :set_town, only: [:show, :edit, :update, :destroy]
-
   # GET /towns
   # GET /towns.json
   def index
@@ -9,7 +8,23 @@ class TownsController < ApplicationController
 
   # GET /towns/1
   # GET /towns/1.json
-  def show
+  def show 
+    weather = ForecastIO.forecast(@town.latitude, @town.longitude, params:{units: 'si'})
+    if weather
+      today = weather.currently
+      if today
+        if today.icon
+          @weatherIconName = today.icon
+        else
+          @weatherIconName = "null"
+        end
+        if today.temperature
+          @weatherTemperature = today.temperature
+        else
+          @weatherTemperature = "null"
+        end
+      end
+    end
   end
 
   # GET /towns/new
