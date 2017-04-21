@@ -9,22 +9,7 @@ class TownsController < ApplicationController
   # GET /towns/1
   # GET /towns/1.json
   def show 
-    weather = ForecastIO.forecast(@town.latitude, @town.longitude, params:{units: 'si'})
-    if weather
-      today = weather.currently
-      if today
-        if today.icon
-          @weatherIconName = today.icon
-        else
-          @weatherIconName = "null"
-        end
-        if today.temperature
-          @weatherTemperature = today.temperature
-        else
-          @weatherTemperature = "null"
-        end
-      end
-    end
+    @town.meteo
   end
 
   # GET /towns/new

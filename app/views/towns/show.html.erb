@@ -5,9 +5,15 @@
   <%= @town.name %>
 </p>
 <p>
-  <strong>Current temperature :</strong>
-  <% if @weatherTemperature != nil %>
-    <%= '%.2f' % @weatherTemperature %> &deg;C
+  <strong>Current weather :</strong>
+  <% if @town.weathername != nil %>
+    <%= @town.weathername %>
+  <% end %>
+</p>
+<p>
+  <strong>Current temperature:</strong>
+  <% if @town.weatherTemperature != nil %>
+    <%= '%.2f' % @town.weatherTemperature %> &deg;C
   <% end %>
 </p>
 <%= link_to 'Edit', edit_town_path(@town) %> |
